@@ -43,7 +43,7 @@ todoRoutes.route("/:id").get(function(req, res) {
 });
 
 todoRoutes.route("/add").post(function(req, res) {
-  let todo = new Todo(res.body);
+  let todo = new Todo(req.body);
   todo
     .save()
     .then(todo => {
